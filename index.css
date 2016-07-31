@@ -1,0 +1,87 @@
+#z_contentContainer {
+    position: absolute;
+    top: 20px;
+    left: 220px;
+    z-index: 5;
+}
+
+.z_toggle {
+    margin-left: 20px;
+    padding-left: 30px;
+    background: url('images/toggle_off.png') no-repeat;
+    cursor: pointer;
+}
+
+.z_toggle.on {
+    background: url('images/toggle_on.png') no-repeat;
+}
+
+#openSettings {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#z_overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: #666;
+    opacity: .5;
+    visibility: hidden;
+}
+
+#z_overlay.on {
+    visibility: visible;
+}
+
+#z_settings {
+    position: absolute;
+    height: 925px;
+    width: 530px;
+    top: 20px;
+    left: 50%;
+    margin-left: -265px;
+    z-index: 10;
+    border: 1px solid black;
+    background-color: #DDF;
+    padding: 25px;
+    visibility: hidden;
+}
+
+#z_settings.on {
+    visibility: visible;
+}
+
+#autoScanFreq {
+    width: 50px;
+}
+
+#scanPoints {
+    width: 475px;
+}
+
+#pushBulletKey {
+    width: 300px;
+}
+
+#maxNotifyDistance {
+    width: 50px;
+}
+
+.z_filterIcon {
+    cursor : pointer;
+    border: 1px solid black;
+    border-radius : 8px;
+    height: 36px;
+    width: 36px;
+    vertical-align: baseline;
+    background-color: white;
+}
+
+.z_filterIcon.selected {
+    background-color : #888;
+    opacity: .4;
+}

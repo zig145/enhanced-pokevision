@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>PokéVision &mdash; Find, locate and track Pokemon near you or anywhere in the world live &amp; realtime in Pokemon GO!</title>
+
+        <link href="https://pokevision.com/asset/css/app.css?6755229" type="text/css" rel="stylesheet">
+        <script src="https://pokevision.com/asset/js/app.js?291bdb5"></script>
+
+        <link href="index.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="index.js"></script>
+        <script>$(document).ready(function() {z_loadContent();});</script>
+
+    </head>
+
+    <body class="home is-en_US">
+
+        <div class="ad-unit ad-unit-hidden"></div>
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="/" class="header-logo">
+                            <span class="header-logo-icon"></span>
+                            <strong>Poké</strong><span>Vision</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-map-search-wrapper">
+                            <a href="javascript:;" class="header-map-locate" data-toggle="tooltip" data-placement="bottom" title="Automatically scroll to my current location (requires browser permissions)!">
+                                <span class="glyphicon glyphicon-screenshot"></span>
+                            </a>
+                            <form method="post" class="header-map-search">
+                                <input type="text" name="name" class="form-control" placeholder="Enter location, eg. Santa Monica Pier, CA...">
+                                <button type="submit" class="btn btn-primary" disabled>
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <header class="header-mobile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="/" class="header-logo">
+                            <span class="header-logo-icon"></span>
+                            <strong>Poké</strong><span>Vision</span>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="header-map-search-wrapper">
+                            <a href="javascript:;" class="header-map-locate">
+                                <span class="glyphicon glyphicon-screenshot"></span>
+                            </a>
+                            <form method="post" class="header-map-search">
+                                <input type="text" name="name" class="form-control" placeholder="Enter location, eg. Santa Monica Pier, CA...">
+                                <button type="submit" class="btn btn-primary" disabled>
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="home-map">
+            <div class="home-map-wrapper"></div>
+            <div class="home-map-tooltip"></div>
+            <div class="home-map-loading">
+                <div class="loading-pokeballs">
+                    <span class="loading-pokeball loading-pokeball-normal"></span>
+                    <span class="loading-pokeball loading-pokeball-great"></span>
+                    <span class="loading-pokeball loading-pokeball-ultra"></span>
+                    <span class="loading-pokeball loading-pokeball-master"></span>
+                </div>
+                <div class="loading-message"></div>
+            </div>
+            <button href="javascript:;" class="home-map-scan btn btn-primary" disabled>
+                <strong>Click To Find Pokémon Near Marker</strong>
+                <small>You can only scan once every 30 seconds.</small>
+            </button>
+        </main>
+
+        <main class="home-sidebar">
+            <div class="ad-unit ad-unit-medrec ad-unit-medrec-atf">
+                <div id="cdm-zone-02"></div>
+            </div>
+            <div class="home-sidebar-warning"><strong>The official Pokémon Go login servers are currently unstable or offline which impacts our service.</strong> Scanning may take longer than expected until issues are resolved.</div>
+            <p class="home-sidebar-social">
+                <span>Follow us on social media for updates, news and support!</span>
+            </p>
+            <h3>Find all Pokemon near you (or a selected target location) in real time for Pokemon Go. Pokemon nearby will be marked along with their appearance timer on the map. These are real time Pokemon locations, meaning they are currently live and can be found exactly at the marked spots.</h3>
+            <p><strong>What is Pokevision?</strong></p>
+            <p>Pokevision is a Pokemon tracker/locator for the mobile game Pokemon Go. It uses the Niantic API to grab the location of all Pokemon near your (or your selected location) and display them on the map in real-time; this means if it is displayed on the map, you can go out and catch them! Note: Rarer pokemons have a shorter appearance time so they might despawn; make sure to be quick and keep an eye on their timers!</p>
+            <p><strong>How do I track Pokemon using Pokevision?</strong></p>
+            <p>There are a few methods to scan for the location of Pokemon:</p>
+            <ol>
+                <li>Click anywhere on the map to drop a location marker. After placing a marker, press scan to reveal Pokemon nearby.</li>
+                <li>Use the Search Bar to enter your location (or a location you wish to scan) and hit enter. You can then click Scan. If there are Pokemon nearby, they will display on the map along with their appearance time.</li>
+            </ol>
+            <p><strong>Are the Pokemon displayed actually there?</strong></p>
+            <p>Yes - as long as the timer has not reached 0, the Pokemon are actually there and in real time.</p>
+            <p><strong>How come I see some Pokemon in game but not on your map?</strong></p>
+            <p>Pokemon that spawn due to lure/incense are not visible on our map since those pokemon are visible to only you.</p>
+            <p><strong>Can I scan anywhere?</strong></p>
+            <p>As long as it is an area where Pokemon Go is serviced, yes. Please keep in mind we have a small delay between scans so that requests do not spam the servers. Scans take around 5-15 seconds depending on the density of the area.</p>
+            <p><strong>I am receiving an error. Help!</strong></p>
+            <p>The Pokemon Go servers are very overloaded during peak hours of the day, this also affects the API and results may take longer or stall. Please be patient and try again!</p>
+            <p><strong>What map provider are you using?</strong></p>
+            <p><strong>How do I contact you guys regarding suggestions, feedback, or business inquiries?</strong></p>
+            <p>You may reach us via the <a href="/contact">contact us</a> page.</p>
+            <div class="ad-unit ad-unit-medrec ad-unit-medrec-btf">
+                <script>
+                    (function() {
+                        if (window.innerWidth < 768) {
+                            document.write('<div id="cdm-zone-06"></div>');
+                        } else {
+                            document.write('<div id="cdm-zone-00"></div>');
+                        }
+                    })();
+                </script>
+            </div>
+        </main>
+
+        <script>
+            $(function() {
+                var locationHash = window.location.hash ? window.location.hash.substring(3) : '';
+                var parts = locationHash.split(',');
+                var latitude = $.isNumeric(parts[0]) ? parseFloat(parts[0]) : null;
+                var longitude = $.isNumeric(parts[1]) ? parseFloat(parts[1]) : null;
+            });
+        </script>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="footer-links">
+                            <li class="footer-links-donate"></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-copyright">&copy; PokeVision.com 2016. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id="cdm-zone-end"></div>
+    </body>
+</html>
