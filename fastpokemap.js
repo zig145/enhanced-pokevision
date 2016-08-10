@@ -1,5 +1,5 @@
 javascript:{
-    
+
 var autoScanThread;
 var observedScanRadius = 70;
 var lastScanIndex = -1;
@@ -46,12 +46,12 @@ function z_loadContent() {
 .z_toggle {
     margin-left: 20px;
     padding-left: 30px;
-    background: url('images/toggle_off.png') no-repeat;
+    background: url('https://raw.githubusercontent.com/zig145/enhanced-pokevision/master/images/toggle_off.png') no-repeat;
     cursor: pointer;
 }
 
 .z_toggle.on {
-    background: url('images/toggle_on.png') no-repeat;
+    background: url('https://raw.githubusercontent.com/zig145/enhanced-pokevision/master/images/toggle_on.png') no-repeat;
 }
 
 #openSettings {
@@ -202,7 +202,7 @@ function z_loadContent() {
         persistSettings();
     });
 
-    notifyCircle = L.circle([marker.getLatLng().lat, marker.getLatLng().lng], maxNotifyDistance, {fill: false, color: "#F00", dashArray: "1, 12"});
+    notifyCircle = L.circle(marker.getLatLng(), parseInt(maxNotifyDistance), {fill: false, color: "#F00", dashArray: "1, 12"});
     createScanCircles();
 
     map.on('click', function(t) {
@@ -243,12 +243,14 @@ function drawScanCircles() {
     for (var i = 0; i < scanCircles.length; i++) {
         scanCircles[i].addTo(map);
     }
+    map.removeLayer(circle);
 }
 
 function removeScanCircles() {
     for (var i = 0; i < scanCircles.length; i++) {
         map.removeLayer(scanCircles[i]);
     }
+    circle.addTo(map);
 }
 
 function moveScanCircles(newOrigin) {
